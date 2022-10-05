@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Filters</title>
+</head>
+<body>
+
+
+    <form action="{{url_for('show_table')}}" method="POST">
+
+        <input type="text" name="company" placeholder="COMPANY NAME">
+
+        <label for="year-selection">Choose a year:</label>
+        <select name="year" id="year" value="one">
+          <option value="one">1</option>
+          <option value="two">2</option>
+          <option value="three">3</option>
+          <option value="four">4</option>
+        </select>
+        
+        <label for="branch-selection">Choose a branch:</label>
+        <select name="branch" id="branch" value="cse">
+          <option value="cse">CSE</option>
+          <option value="ece">ECE</option>
+          <option value="eee">EEE</option>
+          <option value="mech">MECH</option>
+          <option value="civil">CIVIL</option>
+        </select>
+        
+        <label for="sem-selection">Choose a sem:</label>
+        <select name="sem" id="sem" value="first">
+          <option value="first">ONE</option>
+          <option value="second">TWO</option>
+        </select>
+        
+        <label for="criteria-selection-Btech">Choose a criteria Btech:</label>
+        <select name="criteria_btech" id="criteria" value=60.00>
+          <option value=60.00>abv-60%</option>
+          <option value=65.00>abv-65%</option>
+          <option value=70.00>abv-70%</option>
+          <option value=75.00>abv-75%</option>
+          <option value=80.00>abv-80%</option>
+          <option value=85.00>abv-85%</option>
+          <option value=90.00>abv-90%</option>
+          <option value=95.00>abv-95%</option> 
+        </select>
+        
+        <label for="criteria-selection-Inter">Choose a criteria Inter:</label>
+        <select name="criteria_inter" id="criteria_inter" value=60.00>
+          <option value=60.00>abv-60%</option>
+          <option value=65.00>abv-65%</option>
+          <option value=70.00>abv-70%</option>
+          <option value=75.00>abv-75%</option>
+          <option value=80.00>abv-80%</option>
+          <option value=85.00>abv-85%</option>
+          <option value=90.00>abv-90%</option>
+          <option value=95.00>abv-95%</option> 
+        </select>
+        
+        <label for="criteria-selection-10th">Choose a criteria Tenth:</label>
+        <select name="criteria_tenth" id="criteria_tenth" value=60.00>
+          <option value=60.00>abv-60%</option>
+          <option value=65.00>abv-65%</option>
+          <option value=70.00>abv-70%</option>
+          <option value=75.00>abv-75%</option>
+          <option value=80.00>abv-80%</option>
+          <option value=85.00>abv-85%</option>
+          <option value=90.00>abv-90%</option>
+          <option value=95.00>abv-95%</option> 
+        </select>
+        
+        <label for="backlog-selection">Choose backlogs:</label>
+        <select name="backlog-selection" id="backlog-selection" value=0>
+          <option value=0>0</option>
+          <option value=1>1</option>
+          <option value=2>2</option>
+          <option value=3>3</option>
+          <option value=4>4</option>
+        </select>
+        
+        <label for="criteria-selection">Choose a gender:</label>
+        <select name="gender" id="gender" value="Male">
+          <option value="Male">MALE</option>
+          <option value="Female">FEMALE</option>
+          <option value="undefined">Both</option>
+        </select>
+    
+        <button type="submit">Show Eligibility List</button>
+    
+    </form>
+
+   
+    
+</body>
+</html>
