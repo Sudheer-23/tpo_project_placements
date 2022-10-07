@@ -29,11 +29,11 @@ def showList(per_b,per_i,per_t,gen,b):
     return table_eligible
 
 def mailList(per_b,per_i,per_t,gen,b):
-    cursor = con1.cursor()
-    #cursor.execute("""select sqldb1.Email FROM sqldb2 JOIN sqldb1 ON sqldb1.False=sqldb2.False WHERE Percentage>={per_b} AND Inter_Percentage>={per_i} AND SSC_Percentage>={per_t} AND Gender="{gen}" AND Total_Backlogs>={b};""".format(per_b=per_b,per_i=per_i,per_t=per_t,gen=gen,b=b))  
-    cursor.execute('select email from students;')
+    cursor = con.cursor()
+    cursor.execute("""select sqldb1.Email FROM sqldb2 JOIN sqldb1 ON sqldb1.False=sqldb2.False WHERE Percentage>={per_b} AND Inter_Percentage>={per_i} AND SSC_Percentage>={per_t} AND Gender="{gen}" AND Total_Backlogs>={b};""".format(per_b=per_b,per_i=per_i,per_t=per_t,gen=gen,b=b))  
+    #cursor.execute('select email from students;')
     table_mailList = cursor.fetchall()
-    con1.commit()
+    con.commit()
     cursor.close()
     return table_mailList
 
