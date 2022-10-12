@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html><title>Signup Page</title>
+<head>
+	</head>
+    <style>
+
+.form{
+    margin-top: 10%;
+    font-family: geneva;
+    padding: 20px;
+    color: rgb(226, 237, 226);
+    width: 600px;
+    height: 100%;
+    border: none;
+    box-shadow: 0px 0px 8px rgb(104, 100, 100),0px 0px 8px rgb(123, 122, 122);
+    overflow: hidden;
+    background: linear-gradient(360deg,#1c1c1c 10%,#494949 360%);
+    animation-name: formani;
+    animation-duration: 3s;
+    }
+
+.text{
+     width: 300px;
+     border-radius: 5px;
+     height: 40px;
+     display: absolute;
+     padding-left: 6px;
+     color: cornsilk;
+     margin-left: 3%;
+     border: 1px solid #ebebeb;
+     background:none;
+     transition: 0.5s;
+
+}
+.text:hover{
+     width: 350px;
+     border-radius: 2px;
+     height: 40px;
+     background: none;
+    transition: 0.5s;
+}
+input[type = 'submit']{
+    padding: 15px 15px 15px 15px;
+    border: 1px solid;
+    width: 100px;
+    background: none;
+    color: cornsilk;
+
+}
+.ani{
+    font-family: verdana;
+    animation-name: ani;
+    animation-duration: 2s;
+    margin-top: -30%;
+    margin-left: 2% ;
+    font-size: 17px;
+    text-shadow: 0px 2px 2px rgb(209, 196, 196),0px 2px 2px rgb(168, 162, 162);
+    color: rgba(0, 0, 0, 0.835);
+
+}/*
+@keyframes ani{
+    from{
+        filter: opacity(0%);
+        margin-top: 60%;
+        }
+    60%{
+        filter: opacity(10%);
+        margin-top: -20%;
+
+    }
+    to{
+        filter: opacity(100%);
+        margin-top: -30%;
+        }
+        }
+@keyframes formani{
+    from{
+        margin-top: 20px;
+    }
+    100%{
+        margin-top: -73px;
+    }
+}
+@keyframes road {
+   from{
+    opacity: 0;
+   }
+    
+    to{
+        opacity: 100;
+    }
+    
+}
+@keyframes mvbus{
+    from{
+        opacity: 100;
+        margin-left: 0%;
+
+    }
+    to{
+        margin-left: 100%;
+    }
+}*/
+label{
+    font-display: absolute  ;
+
+}
+input[type='radio']{
+    margin-right: 3%;
+}
+table{
+    margin-top: -40%;
+    line-height: 2cm;
+}
+.th{
+    width: 600px;
+    height: 20px;
+    background: rgb(3, 3, 3);
+    padding: 20px;
+    text-align: center;
+    color: whitesmoke;
+    border-radius: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom: 3px solid cyan;
+    margin-top: 70px;
+    font-size: 20px;
+}
+.whbox{
+    margin-top: -200px;
+    background: none;
+}
+
+
+.td{
+    color: cornsilk;
+}
+    </style>
+    <body><div class="mvbus">
+        <div class="whbox">
+        <center>
+        <div class="th">Register</div>
+        <form class="form" action='/signup' method="POST">
+            <table>
+            <tr>
+           <td> <label>Full name</label>&nbsp&nbsp</td>
+           <td>  <input type="text" name = 'fullname' placeholder="Name" class="text" required =''></td>
+        </tr>
+            <br><br>
+            <tr>
+
+            <td><label>Em@il</label>&nbsp&nbsp</td>
+            <td><input type="text" name = 'email' placeholder="@email" class="text" required =''></td>
+        </tr>
+            <br><br>
+            <tr>
+          <td> <label>Mobile Number</label>&nbsp</td> 
+           <td> <input type="text" name = 'number' placeholder="Mobile number" class="text" required =''></td>
+        </tr><br><br>
+        <tr>
+           <td> <label>Gender</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+           <td> <input type="radio" name = 'gender' value="M"><label>Male</label>
+            <input type="radio" name = 'gender' value="F" ><label>Female</label>
+            <input type="radio" name = 'gender' value="O"><label>Others</label></td>
+        </tr>
+            <br><br>
+            <tr>
+            <td><label>Password</label>&nbsp&nbsp</td>
+           <td> <input type="password" name = 'password1' placeholder="Password" class="text" required =''></td>
+        </tr>
+            <br><br>
+            <tr>
+
+           <td> <label>Type-Agian</label>&nbsp&nbsp</td>
+            <td><input type="password" name = 'password2' placeholder="RE-Type" class="text" required =''></td><br><br>  
+        </tr>
+    </table>
+        <input type="submit">
+          </form>
+          <p>
+            {{msg}}
+          </p>
+       <p>Already Have An Account </p><a href="/signin">Click here</a>
+        </center>
+    </div>
+    </body>
+ 
+</html>

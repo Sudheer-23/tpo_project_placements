@@ -1,0 +1,71 @@
+body{
+    text-align: center;
+    background-image: url('blackimg.webp');
+    background-size: cover;
+
+}
+
+.box{
+    width: 50%;
+    border: 1px solid black;
+    background:none;
+    height:50%;
+    padding: 5%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); 
+  /*box-shadow: 2px 0px 3px 0px  rgb(92, 220, 255),2px 0px 3px 0px  rgb(92, 220, 255),2px 0px 3px 0px  rgb(92, 220, 255);
+*/
+}
+
+select,input{
+    font-size: 0.85rem;
+    font-family: monaco;
+    color: white;
+    padding: 10px;
+    width: 25%;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin:3%;
+    background:none;
+}
+
+input{
+    width: 90%;
+    
+}
+
+option{
+    color: black;
+    padding: 1rem;
+
+}
+
+button{
+    padding: 5px;
+    margin-top: 1%;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    border-radius: 5px;
+
+}
+
+button:hover{
+    background-color: rgb(92, 220, 255);
+    border: 2px solid  rgb(92, 220, 255);
+}
+
+button:active{
+    background-color: rgb(92, 255, 116);
+    border: 2px solid rgb(92, 255, 116);
+}
+
+.navbar {
+    border-bottom: 2px solid rgb(80, 191, 199) ;
+}
+
+#flex{
+    margin-left:30% ;
+    display: flex;
+    flex-direction: row;
+}

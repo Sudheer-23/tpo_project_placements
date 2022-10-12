@@ -1,0 +1,122 @@
+{% extends 'layout.html' %}
+{% block content %}  
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        div{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin-bottom: 1rem;
+            gap: 10px;
+
+        }
+
+        .upload{
+            padding-top: 10rem;
+        }
+
+        select{
+            padding: 1rem;
+            border-radius: 10px;
+            border-color: blue;
+        }
+        input{
+            padding: 1rem;
+            border: 1px solid;
+        }
+
+        button{
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border-radius: 20px;
+            border-style: none;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h3>HTML file for uploading sheet</h3>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="/static/upload.css">
+            <title>Upload</title>
+        </head>
+        <body>
+
+        <div class="upload">
+
+        <select name="year" id="year">
+        <option value="">passout year</option>
+        <option value="zero">2000</option>
+        <option value="one">2001</option>
+        <option value="two">2002</option>
+        <option value="three">2003</option>
+        <option value="four">2004</option>
+        <option value="five">2005</option>
+        <option value="six">2006</option>
+        <option value="seven">2007</option>
+        <option value="eight">2008</option>
+        <option value="nine">2009</option>
+        <option value="ten">2010</option>
+        <option value="eleven">2011</option>
+        <option value="twelve">2012</option>
+        <option value="thirteen">2013</option>
+        <option value="fourteen">2014</option>
+        <option value="fifteen">2015</option>
+        <option value="sixteen">2016</option>
+        <option value="seventeen">2017</option>
+        <option value="eighteen">2018</option>
+        <option value="ninteen">2019</option>
+        <option value="twenty">2020</option>
+        <option value="twenty-one">2021</option>
+        <option value="twenty-two">2022</option>
+        <option value="twenty-three">2023</option>
+
+
+        </select>
+            
+        <select name="year" id="year">
+        <option value="">Btech year</option>
+        <option value="one">1</option>
+        <option value="two">2</option>
+        <option value="three">3</option>
+        <option value="four">4</option>
+        </select>
+
+        <select name="branch" id="branch">
+        <option value="">Branch</option>
+        <option value="cse">CSE</option>
+        <option value="ece">ECE</option>
+        <option value="eee">EEE</option>
+        <option value="mech">MECH</option>
+        <option value="civil">CIVIL</option>
+        </select>
+        </div>
+        <div>
+            <input type="file" class="excel" accept=".xls,.xlsx">
+        </div>
+        <div>
+            <button class="button">Upload</button>
+        </div>
+        </body>
+        </html>
+    </center>
+</body>
+</html>
+
+{% endblock %}

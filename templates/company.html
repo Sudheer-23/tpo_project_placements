@@ -1,6 +1,10 @@
+{% include 'nav.html' %}
 {% extends "layout1.html" %}
 {% block body %}
-<div class="row"><h3>Companies Visited</h3></div>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="/"> COMPANY VISITED FOR DRIVES</a>
+</nav>
+
 <div class="row"> 
     <div class="col-md-4">
         {% with messages = get_flashed_messages() %}
@@ -19,7 +23,7 @@
         <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                    <td>c_id</td>
+                    
                     <td>c_name</td>
                     <td>c_per_b</td>
                     <td>c_per_i</td>
@@ -33,7 +37,7 @@
             <tbody>
                 {% for data in sample %}
                 <tr>
-                    <td>{{data.c_id}}</td>
+                    
                     <td>{{data.c_name}}</td>
                     <td>{{data.c_per_b}}</td>
                     <td>{{data.c_per_i}}</td>

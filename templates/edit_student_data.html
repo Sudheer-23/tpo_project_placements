@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSRIT COLLEGE</title>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body>
+   
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">DATA OF {{ student_data.Roll }} {{ student_data.Student_Name }}</a>
+    </nav> 
+
+    <div class="container pt-4">      
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="card card-body">
+                    <form action="/update_student_data_1/{{student_data.Email}}" method="POST">
+                        <div class="form-group">
+                            <label style="color: violet;" for="ID">ID</label>
+                            <input type="text" class="form-control" name="ID" value="{{student_data.False}}">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label style="color: violet;" for="Roll">STUDENT ID</label>
+                            <input type="text" class="form-control" name="Roll" value="{{student_data.Roll}}">
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                            <label style="color: violet;" for="Gender">GENDER</label>
+                            <input type="text" class="form-control" name="Gender" value="{{student_data.Gender}}">
+                        </div>
+
+                        <div class="form-group">
+                            <label style="color: violet;" for="ssc_p">SSC-PERCENTAGE</label>
+                            <input type="text" class="form-control" name="ssc_p" value="{{student_data.SSC_Percentage}}">
+                        </div>
+
+                        <div class="form-group">
+                            <label style="color: violet;" for="inter_p">INTER-PERCENTAGE</label>
+                            <input type="text" class="form-control" name="inter_p" value="{{student_data.Inter_Percentage}}">
+                        </div>
+
+                        <div class="form-group">
+                            <label style="color: violet;" for="phone">PHONE NUMBER</label>
+                            <input type="text" class="form-control" name="phone" value="{{student_data.Mobile_No}}">
+                        </div>
+
+                        <div class="form-group">
+                            <label style="color: violet;" for="email">EMAIL ID</label>
+                            <input type="text" class="form-control" name="email" value="{{student_data.Email}}">
+                        </div>
+                    
+                        <button class="btn btn-primary btn-block">
+                            Update
+                        </button>
+                    </form>
+        
+                </div>
+        
+            </div>
+        
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="card card-body">
+                    <form action="/update_student_data_2/{{student_data.False}}" method="POST">
+                        <div class="form-group">
+                            <label style="color: violet;" for="ID">ID</label>
+                            <input type="text" class="form-control" name="ID" value="{{student_data.False}}">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label style="color: violet;" for="Roll">STUDENT ID</label>
+                            <input type="text" class="form-control" name="Roll" value="{{student_data.Roll}}">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label style="color: violet;" for="Name">STUDENT NAME</label>
+                            <input type="text" class="form-control" name="Name" value="{{student_data.Student_Name}}">
+                        </div>
+
+                        <div class="form-group">
+                            <label style="color: violet;" for="btech_p">BTECH-PERCENTAGE</label>
+                            <input type="text" class="form-control" name="btech_p" value="{{student_data.Percentage}}">
+                        </div>
+
+                        <div class="form-group">
+                            <label style="color: violet;" for="Backlogs">BACKLOGS</label>
+                            <input type="text" class="form-control" name="Backlogs" value="{{student_data.Total_Backlogs}}">
+                        </div>
+                    
+                        <button class="btn btn-primary btn-block">
+                            Update
+                        </button>
+                    </form>
+        
+                </div>
+        
+            </div>
+        
+        </div>
+        
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

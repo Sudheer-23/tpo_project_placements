@@ -11,12 +11,13 @@
 </head>
 <body>
   <center>
-    <form action="{{url_for('show_table')}}" method="POST">
+    <form action="{{url_for('insert_company')}}" method="POST">
       
       <div class = box>
         <input type="text" name="company" placeholder="COMPANY NAME" required>
      <br>
-        <select name="year" id="year" value="one" >
+        <label for="year-selection"></label>
+        <select name="year" id="year" value="one" required>
           <option value="">Year</option>
           <option value="one">1</option>
           <option value="two">2</option>
@@ -25,7 +26,7 @@
         </select>
         
         <label for="branch-selection"></label>
-        <select name="branch" id="branch" value="cse" >
+        <select name="branch" id="branch" value="cse" required>
           <option value="">Branch</option>
           <option value="cse">CSE</option>
           <option value="ece">ECE</option>
@@ -35,7 +36,7 @@
         </select>
         
         <label for="sem-selection"></label>
-        <select name="sem" id="sem" value="first" >
+        <select name="sem" id="sem" value="first" required>
           <option value="">Semester</option>
           <option value="first">ONE</option>
           <option value="second">TWO</option>
@@ -81,7 +82,6 @@
           <option value=90.00>abv-90%</option>
           <option value=95.00>abv-95%</option> 
         </select><br>
-      <div id = "flex">
         <label for="backlog-selection"></label>
         <select name="backlog-selection" id="backlog-selection" value=0 required>
           <option value="">Backlogs</option>
@@ -97,11 +97,11 @@
           <option value="">Gender</option>
           <option value="Male">MALE</option>
           <option value="Female">FEMALE</option>
-          <option value="Both">Both</option>
-        </select><br></div>
-        <button type="submit">Show Eligibility</button>
+          <option value="undefined">Both</option>
+        </select>
     </div>
-  
+        <button type="submit">Show Eligibility</button>
+    
     </form>
 
   </center>

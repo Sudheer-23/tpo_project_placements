@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html><title>Signup Page</title>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename ='css/style.css')}}">
+	</head>
+    <style>
+        .form{
+    margin-top: 10%;
+    font-family: geneva;
+    color: rgb(226, 237, 226);
+    width: 600px;
+    height: 100%;
+    border: none;
+    box-shadow: 0px 0px 18px rgb(104, 100, 100),0px 0px 18px rgb(123, 122, 122);
+    background: linear-gradient(360deg,#1c1c1c 10%,#494949 360%);
+    padding: 20px 20px 20px 20px;
+    }
+
+.text{
+     width: 400px;
+     border-radius: 5px;
+     color: cornsilk;
+     height: 40px;
+     padding-left: 6px;
+     border: 1px solid #ebebeb;
+     background:none;
+     transition: 0.5s;
+
+}
+.text:hover{
+     width: 500px;
+     color: cornsilk;
+     border-radius: 2px;
+     height: 40px;
+     background: none;
+    transition: 0.5s;
+}
+input[type = "submit"]{
+    padding: 15px 15px 15px 15px;
+    border: 1px solid;
+    width: 100px;
+    background: none;
+    color: cornsilk;
+
+}
+img{
+    margin-top: 4%;
+}
+    </style>
+    <body style="background:#f2ebdd;">
+        <center>
+        <form class="form" action='/signin' method="POST">
+            <h2>
+                Em@il
+            </h2>
+            <input type="text" name = 'email' placeholder="@email" required ='' class="text">
+            <h2>
+                Password
+            </h2>
+            <input type="password" name = 'password' placeholder="Password" required ='' class="text"><br><br>
+            <input type="submit">
+
+          </form>
+          <p>
+            {{msg}}
+          </p>
+
+          <h2>{{mail}}</h2>
+          <h2>{{p}}</h2>
+       
+        </center>
+
+
+   
+ 
+</html>
+</body>

@@ -1,0 +1,70 @@
+
+{% include 'nav.html' %}
+{% extends "layout1.html" %}
+{% block body %}
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">LIST OF COLLEGE STUDENTS DATA </a>
+</nav>
+<br>
+<div class="row"> 
+    <div class="col-md-4">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+        
+    <div class="col-md-10">
+        <table id="example" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+    
+                <tr>
+                    <td>s_id</td>
+                    <td>s_roll</td>
+                    <td>s_name</td>
+                    <td>s_gender</td>
+                    <td>s_per_t</td>
+                    <td>s_per_i</td>
+                    <td>s_per_b</td>
+                    <td>s_b</td>
+                    <td>s_phn</td>
+                    <td>s_mail</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in student_data %}
+                <tr>
+                    <td>{{data.False}}</td>
+                    <td>{{data.Roll}}</td>
+                    <td>{{data.Student_Name}}</td>
+                    <td>{{data.Gender}}</td>
+                    <td>{{data.SSC_Percentage}}</td>
+                    <td>{{data.Inter_Percentage}}</td>
+                    <td>{{data.Percentage}}</td>
+                    <td>{{data.Total_Backlogs}}</td>
+                    <td>{{data.Mobile_No}}</td>
+                    <td>{{data.Email}}</td>
+                    <td width="60">
+                        <!-- <a href="/edit/{{data.c_id}}" class="btn btn-secondary btn-sm">Edit</a> -->
+                        <a href="/edit_student_data/{{data.False}}" class="btn btn-primary btn-sm">Edit</a>
+                    </td>
+                    <td width="60">
+                        <a href="/delete_student_data/{{data.False}}" class="btn btn-primary btn-delete btn-danger btn-sm">Delete</a>
+                    </td>
+                   
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+{% endblock %}
+
